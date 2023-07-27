@@ -12,8 +12,9 @@ interface Country {
 }
 
 function Search() {
+  // Country Context and State Usage:
   const { setCountries } = useContext(CountryContext);
-
+  // Search Input Change Handler:
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     const searchValue = event.currentTarget.value;
     if (searchValue) {
