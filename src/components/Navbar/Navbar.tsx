@@ -2,14 +2,18 @@ import { useContext } from "react";
 import { useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
 
+// Interface Definition:
 interface Navbar {
   theme: string;
 }
 function Navbar(props: Navbar) {
+  // Theme Context and State Usage:
   const { theme, setTheme } = useContext(ThemeContext);
   const [themeText, setThemeText] = useState("Dark Mode");
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
+
+  // Theme Change Handler:
 
   const handleThemeChange = () => {
     if (theme === "light") {
