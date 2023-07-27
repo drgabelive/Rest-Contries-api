@@ -1,21 +1,24 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 import axios from "axios";
 import Card from "../Card/Card";
+import { CountryContext } from "../../context/CountryContext";
 
 interface Country {
   name: { official: string };
-  flags: {png: string, alt: string};
+  flags: { png: string; alt: string };
   population: number;
   region: string;
   capital: string;
 }
+
 const Hero = () => {
-  const [countries, setCountries] = useState<Country[]>([]);
+  const { countries, setCountries } = useContext(CountryContext);
+
   useEffect(() => {
     axios
-      .get<any[]>("https://restcountries.com/v3.1/all")
+      .get("https://restcountries.com/v3.1/all")
       .then((res) => {
-        setCountries(res.data);
+        setCountries(res.data as Country[]);
       })
       .catch((err) => {
         console.log(err);
@@ -27,7 +30,7 @@ const Hero = () => {
         {countries.map((el) => {
           return (
             <Card
-            key={el.name.official}
+              key={el.name.official}
               flag={el.flags.png}
               country={el.name.official}
               population={el.population}

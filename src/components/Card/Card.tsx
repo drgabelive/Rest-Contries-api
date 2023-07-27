@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/themeContext";
+
 type CardProps = {
   flag: string;
   country: string;
@@ -8,30 +12,40 @@ type CardProps = {
 };
 
 const Card = (props: CardProps) => {
+  const LightTheme = { backgroundColor: "#fff", color: "#000" };
+  const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="main-container">
-      <div className="card-container">
-        <div>
-          <img className="flag" src={props.flag} alt={props.alt} /> 
-        </div>
-        <div className="details">
+    <Link to={`/details/${props.country}`} className="cardLink">
+      <div className="main-container">
+        <div
+          style={theme === "light" ? LightTheme : DarkTheme}
+          className="card-container"
+        >
           <div>
-            <span className="country">{props.country}</span>
+            <img className="flag" src={props.flag} alt={props.alt} />
           </div>
-          <div>
-            <p className="par">
-              Population: <span className="population">{props.population}</span>
-            </p>
-            <p className="par">
-              Region: <span className="region">{props.region}</span>
-            </p>
-            <p className="par">
-              Capital: <span className="capital">{props.capital}</span>
-            </p>
+          <div className="details">
+            <div>
+              <span className="country">{props.country}</span>
+            </div>
+            <div>
+              <p className="par first-par">
+                Population:{" "}
+                <span className="population">{props.population}</span>
+              </p>
+              <p className="par">
+                Region: <span className="region">{props.region}</span>
+              </p>
+              <p className="par">
+                Capital: <span className="capital">{props.capital}</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
