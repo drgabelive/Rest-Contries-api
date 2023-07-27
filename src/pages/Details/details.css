@@ -17,7 +17,8 @@
   .border-container{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 710px;
+    justify-content: space-evenly;
     padding-top: 40px;
     padding-left: 70px;
   }
@@ -71,8 +72,10 @@
     margin: 10px 0;
     font-size: 14px;
     text-decoration: none;
-    width: 150px;
+    width: 120px;
   }
+
+
 
 .native-name{
   margin-left: 10px;

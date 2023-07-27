@@ -100,8 +100,8 @@ function Detail() {
                     <span className="native-name">
                       {Object.keys(country.name.nativeName).map((el, key) => {
                         return (
-                          <span key={key}>
-                            {country.name.nativeName[el].common}
+                          <span className="native" key={key}>
+                            {country.name.nativeName[el].common + " "}
                           </span>
                         );
                       })}
@@ -142,7 +142,7 @@ function Detail() {
                     Languages:{" "}
                     <span className="language">
                       {Object.values(country?.languages).map((el, key) => {
-                        return <span key={key}>{el}</span>;
+                        return <span key={key}>{el + " "}</span>;
                       })}
                     </span>
                   </p>
