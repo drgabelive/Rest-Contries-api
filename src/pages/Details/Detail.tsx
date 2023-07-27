@@ -36,7 +36,7 @@ const BorderCountryCard = (props: BorderCountry) => {
         setBorder(res.data[0].name.common);
       })
       .catch((err) => console.log(err));
-  }, []);
+  });
 
   return (
     <div className="border-row">
@@ -65,7 +65,8 @@ function Detail() {
           console.log(err);
         });
     }
-  }, []);
+  });
+
   return (
     <div
       style={theme === "light" ? LightTheme : DarkTheme}
