@@ -1,6 +1,10 @@
+// import statements
+
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/themeContext";
+
+// Card typescript definition
 
 type CardProps = {
   flag: string;
@@ -11,7 +15,10 @@ type CardProps = {
   alt: string;
 };
 
+// Card functional component definition
+
 const Card = (props: CardProps) => {
+  // theme Context and styling
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
   const { theme } = useContext(ThemeContext);
@@ -23,6 +30,7 @@ const Card = (props: CardProps) => {
           style={theme === "light" ? LightTheme : DarkTheme}
           className="card-container"
         >
+          {/* Rendering the country details  */}
           <div>
             <img className="flag" src={props.flag} alt={props.alt} />
           </div>
