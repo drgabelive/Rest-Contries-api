@@ -7,6 +7,7 @@ import { CountryContext } from "../../context/CountryContext";
 import { ThemeContext } from "../../context/themeContext";
 import axios from "axios";
 
+// define interface country that will be fetched from the API
 interface Country {
   name: { official: string };
   flags: { png: string; alt: string };
@@ -16,6 +17,7 @@ interface Country {
 }
 
 export default function MySelect() {
+  // styling and state initialization
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = {
     backgroundColor: "#2B3844",
@@ -26,6 +28,7 @@ export default function MySelect() {
   const { setCountries } = React.useContext(CountryContext);
   const { theme } = React.useContext(ThemeContext);
 
+  // fetch countries Data by Region
   const getCountriesByRegion = (region: string) => {
     if (region === "") {
       axios
@@ -47,8 +50,7 @@ export default function MySelect() {
         });
     }
   };
-  // const { countries, setCountries } = React.useContext(CountryContext)
-
+  // Event Handler for Select Component:
   const handleChange = (event: SelectChangeEvent) => {
     setRegion(event.target.value);
     getCountriesByRegion(event.target.value);
