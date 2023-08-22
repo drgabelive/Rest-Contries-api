@@ -9,7 +9,7 @@ const Home = () => {
   const DarkTheme = { backgroundColor: "#202C36", color: "#fff" };
   return (
     <div style={theme === "light" ? LightTheme : DarkTheme}>
-      <Search />
+      <Search theme={theme} />
       <Hero />
     </div>
   );

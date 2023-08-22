@@ -34,7 +34,7 @@ const Card = (props: CardProps) => {
           <div>
             <img className="flag" src={props.flag} alt={props.alt} />
           </div>
-          <div className="details">
+          <div className="details" style={{ paddingLeft: "20px" }}>
             <div>
               <span className="country">{props.country}</span>
             </div>

@@ -49,8 +49,16 @@ function Detail() {
   const { countryName } = useParams();
   const [country, setCountry] = useState<CountryDetails | null>(null);
   const { theme } = useContext(ThemeContext);
-  const LightTheme = { backgroundColor: "#fff", color: "#000" };
-  const DarkTheme = { backgroundColor: "#202C36", color: "#fff" };
+  const LightTheme = {
+    backgroundColor: "#fff",
+    color: "#000",
+    height: "84vh",
+  };
+  const DarkTheme = {
+    backgroundColor: "#202C36",
+    color: "#fff",
+    height: "84vh",
+  };
 
   useEffect(() => {
     if (countryName) {

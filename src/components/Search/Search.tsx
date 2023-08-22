@@ -11,7 +11,7 @@ interface Country {
   capital: string;
 }
 
-function Search() {
+function Search(props: { theme: string }) {
   // Country Context and State Usage:
   const { setCountries } = useContext(CountryContext);
   // Search Input Change Handler:
@@ -48,6 +48,9 @@ function Search() {
           ></i>
           <input
             className="input"
+            style={
+              props.theme === "light" ? { color: "black" } : { color: "white" }
+            }
             placeholder="Search for a country..."
             onChange={handleChange}
           />

@@ -21,16 +21,19 @@ function App() {
     [countries, setCountries]
   );
   const themeValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
-
+  const LightTheme = { backgroundColor: "#fff", color: "#000" };
+  const DarkTheme = { backgroundColor: "#202C36", color: "#fff" };
   return (
     <ThemeContext.Provider value={themeValue}>
       <CountryContext.Provider value={value}>
         <BrowserRouter>
-          <Navbar theme={theme} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/details/:countryName" element={<Detail />} />
-          </Routes>
+          <div style={theme === "light" ? LightTheme : DarkTheme}>
+            <Navbar theme={theme} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/details/:countryName" element={<Detail />} />
+            </Routes>
+          </div>
         </BrowserRouter>
       </CountryContext.Provider>
     </ThemeContext.Provider>
