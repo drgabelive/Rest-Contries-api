@@ -6,6 +6,8 @@ import { ThemeContext } from "../../context/themeContext";
 interface Navbar {
   theme: string;
 }
+
+// Define the Navbar component
 function Navbar(props: Navbar) {
   // Theme Context and State Usage:
   const { theme, setTheme } = useContext(ThemeContext);
@@ -24,6 +26,8 @@ function Navbar(props: Navbar) {
       setThemeText("Dark Mode");
     }
   };
+
+  // Render the Navbar component
   return (
     <nav
       style={props.theme === "light" ? LightTheme : DarkTheme}
