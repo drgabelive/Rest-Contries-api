@@ -3,6 +3,7 @@ import MySelect from "../MySelect/MySelect";
 import { CountryContext } from "../../context/CountryContext";
 import axios from "axios";
 
+// Define the interface for the country data
 interface Country {
   name: { official: string };
   flags: { png: string; alt: string };
@@ -11,6 +12,7 @@ interface Country {
   capital: string;
 }
 
+// Define the Search component
 function Search(props: { theme: string }) {
   // Country Context and State Usage:
   const { setCountries } = useContext(CountryContext);
@@ -37,7 +39,7 @@ function Search(props: { theme: string }) {
         });
     }
   };
-
+  // Render the Search component
   return (
     <div className="search-container">
       <div className="search">

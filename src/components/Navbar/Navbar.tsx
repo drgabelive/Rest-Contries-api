@@ -26,7 +26,6 @@ function Navbar(props: Navbar) {
       setThemeText("Dark Mode");
     }
   };
-
   // Render the Navbar component
   return (
     <nav
