@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "./pages/Details/Detail";
+
+// Define a TypeScript interface for the structure of a country
 interface Country {
   name: { official: string };
   flags: { png: string; alt: string };
@@ -13,16 +15,24 @@ interface Country {
   capital: string;
 }
 
+// Define the main functional component of the app
 function App() {
+  // Set up state for countries and theme
   const [countries, setCountries] = useState<Country[]>([]);
   const [theme, setTheme] = useState("light");
+
+  // Create memoized values for context providers
   const value = useMemo(
     () => ({ countries, setCountries }),
     [countries, setCountries]
   );
   const themeValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
+
+  // Define theme styles
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = { backgroundColor: "#202C36", color: "#fff" };
+
+  // Render the app components
   return (
     <ThemeContext.Provider value={themeValue}>
       <CountryContext.Provider value={value}>
