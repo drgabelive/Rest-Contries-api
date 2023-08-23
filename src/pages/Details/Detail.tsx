@@ -4,6 +4,7 @@ import axios from "axios";
 import "./details.css";
 import { ThemeContext } from "../../context/themeContext";
 
+//  Define TypeScript interfaces to represent the expected structure of data
 interface BorderCountry {
   name: string;
 }
@@ -24,6 +25,7 @@ interface CountryDetails {
   borders?: string[];
 }
 
+// Create a functional component BorderCountryCard
 const BorderCountryCard = (props: BorderCountry) => {
   const [bord, setBorder] = useState(props.name);
 
@@ -45,6 +47,7 @@ const BorderCountryCard = (props: BorderCountry) => {
   );
 };
 
+// Create the main functional component Detail
 function Detail() {
   const { countryName } = useParams();
   const [country, setCountry] = useState<CountryDetails | null>(null);
@@ -60,6 +63,7 @@ function Detail() {
     height: "84vh",
   };
 
+  // useEffect Hooks
   useEffect(() => {
     if (countryName) {
       axios
