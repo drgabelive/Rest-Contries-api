@@ -27,7 +27,16 @@ interface CountryDetails {
 
 // Create a functional component BorderCountryCard
 const BorderCountryCard = (props: BorderCountry) => {
+  const { theme } = useContext(ThemeContext);
   const [bord, setBorder] = useState(props.name);
+  const LightTheme = {
+    backgroundColor: "#fff",
+    color: "#000",
+  };
+  const DarkTheme = {
+    backgroundColor: "#2B3844",
+    color: "#fff",
+  };
 
   useEffect(() => {
     axios
@@ -41,7 +50,10 @@ const BorderCountryCard = (props: BorderCountry) => {
   });
 
   return (
-    <div className="border-row">
+    <div
+      style={theme === "light" ? LightTheme : DarkTheme}
+      className="border-row"
+    >
       <p className="border-row-p">{bord}</p>
     </div>
   );
@@ -52,15 +64,27 @@ function Detail() {
   const { countryName } = useParams();
   const [country, setCountry] = useState<CountryDetails | null>(null);
   const { theme } = useContext(ThemeContext);
+  const LightThemeBack = {
+    backgroundColor: "#fff",
+    color: "#000",
+    textDecoration: "none",
+    padding: "12px 20px",
+    width: "fit-content",
+  };
+  const DarkThemeBack = {
+    backgroundColor: "#2B3844",
+    color: "#fff",
+    textDecoration: "none",
+    padding: "12px 20px",
+    width: "fit-content",
+  };
   const LightTheme = {
     backgroundColor: "#fff",
     color: "#000",
-    height: "84vh",
   };
   const DarkTheme = {
     backgroundColor: "#202C36",
     color: "#fff",
-    height: "84vh",
   };
 
   // useEffect Hooks
@@ -88,11 +112,7 @@ function Detail() {
       <Link
         className="back"
         to={`/`}
-        style={{
-          textDecoration: "none",
-          width: "fit-content",
-          padding: "12px 20px",
-        }}
+        style={theme === "light" ? LightThemeBack : DarkThemeBack}
       >
         <div className="material-symbols-outlined bk">arrow_back</div>
         <div className="b-r " style={{ paddingLeft: "10px" }}>

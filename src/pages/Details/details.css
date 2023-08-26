@@ -50,14 +50,13 @@
 }
 
 
-/* .border-row{
-  background-color: transparent;
+.border-row{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: center;
   padding: 6px 20px;
   margin: 0 10px;
-} */
+}
 
 .b-r{
 font-family: "Nunito Sans";
