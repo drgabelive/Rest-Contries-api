@@ -17,7 +17,7 @@ interface Country {
 }
 
 export default function MySelect() {
-  // styling and state initialization
+  //  state initialization for theme
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = {
     backgroundColor: "#2B3844",

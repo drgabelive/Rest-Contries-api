@@ -84,12 +84,22 @@ function Detail() {
       style={theme === "light" ? LightTheme : DarkTheme}
       className="single-container"
     >
-      <div className="back">
-        <Link to={`/`}>
-          <span className="material-symbols-outlined">arrow_back</span>
-        </Link>
-        <p>Back</p>
-      </div>
+      {/* <div className="back"> */}
+      <Link
+        className="back"
+        to={`/`}
+        style={{
+          textDecoration: "none",
+          width: "fit-content",
+          padding: "12px 20px",
+        }}
+      >
+        <div className="material-symbols-outlined bk">arrow_back</div>
+        <div className="b-r " style={{ paddingLeft: "10px" }}>
+          Back
+        </div>
+      </Link>
+      {/* </div> */}
       {country && (
         <div className="details-main">
           <div className="single-card">
