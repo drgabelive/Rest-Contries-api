@@ -7,6 +7,13 @@
     padding-left: 50px;
   }
   
+
+  .single-container {
+    height: fit-content;
+    background-color: red;
+  }
+
+
   .single-flag{
     width: 480px;
     height: 440px;
@@ -41,7 +48,7 @@
 
   .details-info{
     width: 100%;
-    padding-top: 40px;
+    padding-top: 10px;
   }
 
 .detail-container{
