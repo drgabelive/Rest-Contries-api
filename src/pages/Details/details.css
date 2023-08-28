@@ -9,18 +9,20 @@
   
   .single-flag{
     width: 480px;
-    height: 380px;
+    height: 440px;
     border-radius: 15px;
     
   }
 
   .border-container{
     display:flex;
-    flex-direction: row;
-    width: 710px;
+    /* flex-direction: row; */
+    align-items:center;
+    width: 980px;
     justify-content: space-evenly;
     padding-top: 40px;
     padding-left: 70px;
+    margin-left: -20px;
   }
 
   .details-main{
@@ -98,7 +100,7 @@ align-self: baseline;
     margin: 10px 0;
     font-size: 14px;
     text-decoration: none;
-    width: 300px;
+    width: 350px;
     
   }
 
