@@ -54,7 +54,15 @@ const BorderCountryCard = (props: BorderCountry) => {
       style={theme === "light" ? LightTheme : DarkTheme}
       className="border-row"
     >
-      <p className="border-row-p">{bord}</p>
+      <p className="border-row-p">
+        <Link
+          to={`/details/${bord}`}
+          style={theme === "light" ? LightTheme : DarkTheme}
+          className="border-row-p-link"
+        >
+          {bord}
+        </Link>
+      </p>
     </div>
   );
 };
@@ -143,7 +151,12 @@ function Detail() {
                       {Object.keys(country.name.nativeName).map((el, key) => {
                         return (
                           <span className="native" key={key}>
-                            {country.name.nativeName[el].common + " "}
+                            {country.name.nativeName[el].common}
+
+                            {Object.keys(country.name.nativeName).length !=
+                            key + 1
+                              ? ", "
+                              : null}
                           </span>
                         );
                       })}
@@ -151,7 +164,9 @@ function Detail() {
                   </p>
                   <p className="par2">
                     Population:{" "}
-                    <span className="population">{country.population}</span>
+                    <span className="population">
+                      {country.population.toLocaleString("en-US")}
+                    </span>
                   </p>
                   <p className="par2">
                     Region: <span className="region">{country.region}</span>
@@ -184,7 +199,15 @@ function Detail() {
                     Languages:{" "}
                     <span className="language">
                       {Object.values(country?.languages).map((el, key) => {
-                        return <span key={key}>{el + " "}</span>;
+                        return (
+                          <span key={key}>
+                            {el}{" "}
+                            {Object.keys(country.name.nativeName).length !=
+                            key + 1
+                              ? ", "
+                              : null}
+                          </span>
+                        );
                       })}
                     </span>
                   </p>

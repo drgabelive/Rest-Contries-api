@@ -30,7 +30,11 @@ function App() {
 
   // Define theme styles
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
-  const DarkTheme = { backgroundColor: "#202C36", color: "#fff" };
+  const DarkTheme = {
+    backgroundColor: "#202C36",
+    color: "#fff",
+    minHeight: "100vh",
+  };
 
   // Render the app components
   return (

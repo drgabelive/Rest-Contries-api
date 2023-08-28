@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
-
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 // Interface Definition:
 interface Navbar {
   theme: string;
@@ -14,6 +14,9 @@ function Navbar(props: Navbar) {
   const [themeText, setThemeText] = useState("Dark Mode");
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
+
+  const IconDarkTheme = { color: "white", fontSize: "20px" };
+  const IconLightTheme = { color: "#2B3844", fontSize: "20px" };
 
   // Theme Change Handler:
 
@@ -35,9 +38,9 @@ function Navbar(props: Navbar) {
       <h2>Where in the world?</h2>
       <span onClick={handleThemeChange} className="nav-span">
         <i
-          style={props.theme === "light" ? LightTheme : DarkTheme}
-          className="far fa-moon"
+          className={props.theme === "light" ? "far fa-moon" : "fa fa-moon"}
         ></i>
+
         {themeText}
       </span>
     </nav>
