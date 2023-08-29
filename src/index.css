@@ -200,8 +200,8 @@ text-decoration: none;
   }
   
   .search {
-    height: 50px;
-    width:350px;
+    height: 54px;
+    width:400px;
     margin-top: 30px;
     margin-left: 0px;
     display: flex;
@@ -214,7 +214,7 @@ text-decoration: none;
   }
 
   .search-span{
-    background-color: #2B3844;
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 400px;
     border-radius: 10px;
@@ -227,7 +227,7 @@ text-decoration: none;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 10px;
     font-weight: light;
-    max-width: 500px;
+    max-width: 400px;
     background-color: transparent;
     
     }
@@ -265,26 +265,25 @@ text-decoration: none;
       /* padding-top: 20px; */
       background-color: transparent;
       /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-      /* border-radius: 5px; */
+      border-radius: 10px;
     }
     
     .flag{
       width: 22rem;
       height: 200px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
     
     .details {
       padding: 70px 30px;
-      line-height: 10px;
+    
     }
     
     .country {
       font-weight:800;
       font-size: 20px;
       font-family: 'Nunito Sans' sans-serif;
-      background-color: red;
       
     }
     
