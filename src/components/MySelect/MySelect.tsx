@@ -61,6 +61,7 @@ export default function MySelect() {
       <FormControl fullWidth>
         <Select
           // id="demo-simple-select"
+          className="bright11"
           value={region}
           displayEmpty
           onChange={handleChange}

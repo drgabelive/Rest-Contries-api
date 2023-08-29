@@ -40,8 +40,10 @@ const Card = (props: CardProps) => {
             </div>
             <div>
               <p className="par first-par">
-                Population:{" "}
-                <span className="population">{props.population}</span>
+                Population: {/* This adds commas to the numbers */}
+                <span className="population">
+                  {props.population.toLocaleString("en-US")}
+                </span>
               </p>
               <p className="par">
                 Region: <span className="region">{props.region}</span>

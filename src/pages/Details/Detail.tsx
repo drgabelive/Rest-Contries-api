@@ -150,6 +150,7 @@ function Detail() {
                     <span className="native-name">
                       {Object.keys(country.name.nativeName).map((el, key) => {
                         return (
+                          // This adds a comma if its not on the last text
                           <span className="native" key={key}>
                             {country.name.nativeName[el].common}
 
