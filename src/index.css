@@ -87,6 +87,7 @@ outline: none;
   justify-content: space-evenly;
   margin: 90px 110px;  
   width: 90px;
+  border-radius: 10px;
 }
 
 p{
