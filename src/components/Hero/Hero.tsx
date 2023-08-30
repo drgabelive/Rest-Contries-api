@@ -36,10 +36,11 @@ const Hero = () => {
           // console.log(typeof el.capital);
           if (el.capital) {
             let foo = "";
-            el.capital.map((capital, i) => {
+            el.capital.map((capital: string, i: number) => {
               foo += capital;
               if (i != el.capital.length - 1) foo += ", ";
             });
+            console.log(foo);
             el.foo = foo;
           }
 

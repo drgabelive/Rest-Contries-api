@@ -39,7 +39,8 @@
 
  
   .details {
-    margin-bottom: 20px;
+    padding-top: 20px;
+    
   }
 
 
@@ -147,9 +148,9 @@ align-self: baseline;
   }
 
 
-  .details{
+  /* .details{
     margin: 45px 0;
-  }
+  } */
   
 
 .native-name{
