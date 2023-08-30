@@ -8,7 +8,7 @@
     padding: auto 20px;
     margin-top: 20px;
     margin-bottom: 30px;
-    background-color: red;
+    /* background-color: red; */
   }
   
   .card-container{
@@ -92,13 +92,9 @@
     height: 200px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
   }
-  
-  .details {
-    /* padding: 60px 0px; */
-    margin-bottom: 20px;
-    /* background-color: red; */
-  }
+ 
   
   .country {
     font-weight:800;

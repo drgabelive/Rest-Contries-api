@@ -122,7 +122,7 @@ function Detail() {
         to={`/`}
         style={theme === "light" ? LightThemeBack : DarkThemeBack}
       >
-        <div className="material-symbols-outlined bk">arrow_back</div>
+        <div className="material-symbols-outlined">arrow_back</div>
         <div className="b-r " style={{ paddingLeft: "10px" }}>
           Back
         </div>

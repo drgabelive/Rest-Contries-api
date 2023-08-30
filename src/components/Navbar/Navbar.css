@@ -7,7 +7,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 98px;
+    padding: 20px 60px;
+    margin-bottom: 20px;
   }
   
 
@@ -23,11 +24,12 @@
       .nav span  {
         margin-top: 15px;
         font-weight: bold;
-        margin-right: 0.5rem;
+        padding-right: 0.5rem;
         color: FFFFFF;
         font-family: 'Nunito Sans';
         font-size: 16px;
-        margin-right: -15px;  
+        margin-right: 70px; 
+        flex-wrap: wrap;
       }
 
 
