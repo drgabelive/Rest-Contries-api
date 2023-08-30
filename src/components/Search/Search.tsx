@@ -2,6 +2,7 @@ import { useContext } from "react";
 import MySelect from "../MySelect/MySelect";
 import { CountryContext } from "../../context/CountryContext";
 import axios from "axios";
+import "./Search.css";
 
 // Define the interface for the country data
 interface Country {

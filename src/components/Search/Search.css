@@ -1,0 +1,108 @@
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  
+  }
+  
+  .search {
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 6vh;
+    width:33%;
+    margin-top: 30px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+  
+  }
+  
+  
+  .search-span {
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px 45px;
+    position: absolute;
+  }
+  
+  .input {
+  border: transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: light;
+  max-width: 500px;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  /* color: white; */
+  }
+
+  
+
+/* media   queries for Mobile View */
+@media screen and (min-width:320px) and (max-width: 480px) { 
+
+    .search-container{
+      width: 90vw;
+      margin: 20px auto 0 auto;
+      overflow: hidden;
+      height: 250px;
+      padding: 0 auto;
+      display: flex;
+      flex-direction: column;   
+    }
+    
+    .search {
+      height: 58px;
+      width:410px;
+      margin-top: 30px;
+      margin-left: -20px;
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+      color: #B2B2B2;
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  
+    }
+  
+    .search-span{
+      background-color: transparent;
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+    }
+  
+  
+    .input {
+      border: transparent;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      font-weight: light;
+      background-color: transparent;
+      color: #C4C4C4;
+      
+      }
+  
+      .MuiInputBase-root{
+        width: 250px;
+        height: 5vh;
+        margin-top: 20px;
+        border: none;
+        font-weight:400;
+        background-color: transparent;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+    }
