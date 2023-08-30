@@ -94,15 +94,6 @@
       
       }
   
-      .MuiInputBase-root{
-        width: 250px;
-        height: 5vh;
-        margin-top: 20px;
-        border: none;
-        font-weight:400;
-        background-color: transparent;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-      }
+
 
     }

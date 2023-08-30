@@ -1,8 +1,8 @@
 // import statements
-
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/themeContext";
+import "./Card.css";
 
 // Card typescript definition
 
