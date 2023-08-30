@@ -33,6 +33,16 @@ const Hero = () => {
     <div>
       <div className="cards-container">
         {countries.map((el) => {
+          // console.log(typeof el.capital);
+          if (el.capital) {
+            let foo = "";
+            el.capital.map((capital, i) => {
+              foo += capital;
+              if (i != el.capital.length - 1) foo += ", ";
+            });
+            el.foo = foo;
+          }
+
           return (
             <Card
               key={el.name.official}
@@ -40,7 +50,7 @@ const Hero = () => {
               country={el.name.official}
               population={el.population}
               region={el.region}
-              capital={el.capital}
+              capital={el.foo}
               alt={el.flags.alt}
             />
           );
