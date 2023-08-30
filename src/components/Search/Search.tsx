@@ -43,7 +43,10 @@ function Search(props: { theme: string }) {
   return (
     <div className="search-container">
       <div className="search">
-        <span className="search-span">
+        <span
+          className="search-span"
+          style={props.theme === "light" ? {} : { backgroundColor: "#2B3844" }}
+        >
           <i
             className="glass fa fa-search"
             style={{ height: "20px", width: "40px" }}
