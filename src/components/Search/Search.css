@@ -51,33 +51,35 @@
 
     .search-container{
       width: 90vw;
-      margin: 20px auto 0 auto;
+      margin: 20px auto 0 20px;
       overflow: hidden;
       height: 250px;
       padding: 0 auto;
       display: flex;
-      flex-direction: column;   
+      flex-direction: column; 
+      /* background-color: red;   */
     }
     
     .search {
       height: 58px;
-      width:410px;
+      width:420px;
       margin-top: 30px;
       margin-left: -20px;
       display: flex;
       flex-direction: row;
-      background-color: transparent;
+      /* background-color: blue; */
       align-items: center;
       justify-content: space-between;
       border-radius: 5px;
       color: #B2B2B2;
-      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+      /* box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1); */
   
     }
   
     .search-span{
-      background-color: transparent;
-      width: 90%;
+      /* background-color: red; */
+      width: 91%;
+      margin-left: 5px;
       display: flex;
       flex-direction: row;
       border-radius: 10px;
