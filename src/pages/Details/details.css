@@ -39,21 +39,18 @@
 
  
   .details {
-    /* padding: 60px 0px; */
     margin-bottom: 20px;
-    /* background-color: red; */
   }
+
 
   .details-main{
     display: flex;
     width: 100%;
-  /* background-color: green; */
   }
+
 
   .detail-container-2{
     margin-left: 20%;
-    /* padding-left: 5%; */
-    /* background-color: red; */
   }
 
  
@@ -67,12 +64,14 @@
   /* background-color: blue; */
 }
 
+
 .details-info{
   width: 100%;
   padding-top: 15px;
   margin-left: 10px;
   /* background-color: red; */
 }
+
 
 .border-row{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -83,15 +82,18 @@
   
 }
 
+
 .b-r{
 font-family: "Nunito Sans";
 font-weight: light;
 font-size: 16px;
 }
 
+
 .border-row-p{
   font-size: 12px;
 }
+
 
 .border-row-p-link{
 font-family: "Nunito Sans";
@@ -100,17 +102,12 @@ font-family: "Nunito Sans";
   text-decoration: none;
 }
 
+
 .bk {
-/* display: flex; */
 align-self: baseline;
 }
 
-/* .back{
-  width: 156px;
-  height: 45px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-} */
+
 .back{
   display: flex;
   flex-direction: row;
