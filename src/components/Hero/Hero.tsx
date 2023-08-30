@@ -21,26 +21,27 @@ const Hero = () => {
     axios
       .get("https://restcountries.com/v3.1/all")
       .then((res) => {
-        setCountries(res.data as Country[]); // Update countries with fetched data
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        setCountries(res.data); // Update countries with fetched data
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []); // Empty dependency array means this effect runs only once after initial render
+  }, [setCountries]); // Empty dependency array means this effect runs only once after initial render
 
   // Render the Hero component
   return (
     <div>
       <div className="cards-container">
         {countries.map((el) => {
-          // console.log(typeof el.capital);
-          if (el.capital) {
+          const elCapital: string[] = el.capital as unknown as string[];
+
+          if (elCapital) {
             let foo = "";
-            el.capital.map((capital: string, i: number) => {
+            elCapital.map((capital: string, i: number) => {
               foo += capital;
-              if (i != el.capital.length - 1) foo += ", ";
+              if (i != elCapital.length - 1) foo += ", ";
             });
-            console.log(foo);
             el.foo = foo;
           }
 
