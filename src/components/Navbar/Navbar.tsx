@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
+import "./Navbar.css";
+
 // Interface Definition:
 interface Navbar {
   theme: string;
