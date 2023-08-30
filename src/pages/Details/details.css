@@ -133,6 +133,10 @@ align-self: baseline;
   }
 
 
+  .details{
+    margin: 45px 0;
+  }
+  
 
 .native-name{
   margin-left: 10px;
