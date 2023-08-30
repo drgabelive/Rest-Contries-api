@@ -280,7 +280,7 @@ padding-left: 0;
   display: flex;
   flex-direction: row;
   /* flex-wrap: wrap; */
-  /* width: 90vw; */
+  width: 90vw;
 /* background-color: red; */
   margin-left: 0;
   /* background-color: aqua; */
@@ -290,10 +290,11 @@ margin-bottom: 50px;
 
 .border-row{
   background: white;
-  margin: 0;
+  margin: 10px 2px;
   margin-right: 10px;
+  padding-top: 6px;
+  height: 30px;
 }
-.border-row{
-margin: 10px 2px;
-}
+
+
 }
