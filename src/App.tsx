@@ -8,6 +8,7 @@ import Detail from "./pages/Details/Detail";
 
 // Define a TypeScript interface for the structure of a country
 interface Country {
+  foo: string;
   name: { official: string };
   flags: { png: string; alt: string };
   population: number;
