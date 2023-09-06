@@ -20,10 +20,7 @@ interface Country {
 export default function MySelect() {
   //  state initialization for theme
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
-  const DarkTheme = {
-    backgroundColor: "#2B3844",
-    color: "#fff",
-  };
+  const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
 
   const [region, setRegion] = React.useState("");
   const { setCountries } = React.useContext(CountryContext);
@@ -57,6 +54,7 @@ export default function MySelect() {
     getCountriesByRegion(event.target.value);
   };
 
+  // user interface that renders a dropdown (Select) with a list of regions (MenuItem).
   return (
     <Box sx={{ minWidth: 240 }} border={"none"}>
       <FormControl fullWidth>
