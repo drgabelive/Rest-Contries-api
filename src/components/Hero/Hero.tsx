@@ -3,15 +3,6 @@ import axios from "axios";
 import Card from "../Card/Card";
 import { CountryContext } from "../../context/CountryContext";
 
-// Define the interface for the country data
-interface Country {
-  name: { official: string };
-  flags: { png: string; alt: string };
-  population: number;
-  region: string;
-  capital: string;
-}
-
 // Define the Hero component
 const Hero = () => {
   const { countries, setCountries } = useContext(CountryContext);

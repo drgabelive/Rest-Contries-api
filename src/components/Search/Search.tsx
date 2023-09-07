@@ -6,6 +6,7 @@ import "./Search.css";
 
 // Define the interface for the country data
 interface Country {
+  foo: string;
   name: { official: string };
   flags: { png: string; alt: string };
   population: number;

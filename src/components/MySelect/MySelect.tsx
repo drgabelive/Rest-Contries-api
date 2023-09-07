@@ -9,6 +9,7 @@ import axios from "axios";
 
 // define interface country that will be fetched from the API
 interface Country {
+  foo: string;
   name: { official: string };
   flags: { png: string; alt: string };
   population: number;
