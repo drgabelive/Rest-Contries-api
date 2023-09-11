@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/themeContext";
-import Search from "../../components/Search/Search";
 import Hero from "../../components/Hero/Hero";
+import Search from "../../components/Search/Search";
 
 // Create the functional component Home
 const Home = () => {

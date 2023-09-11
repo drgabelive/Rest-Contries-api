@@ -115,7 +115,7 @@ align-self: baseline;
   flex-direction: row;
   justify-content: space-evenly;
   margin: 90px 0 90px 70px;  
-  /* width: 90px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: center;
   border-radius: 10px;
 }
@@ -201,11 +201,12 @@ align-self: baseline;
 
 
   .single-flag{
-    width: 400px;
+    max-width: 100vw;
+    width: 350px;
     height: 260px;
     border-radius: 10px;
     margin-left: 10px;
-
+  
   }
 
 
@@ -242,7 +243,7 @@ align-self: baseline;
 
 .name{
   height: auto;
-  width: auto;
+  width: 400px;
   padding-left: 20px;
 }
 
@@ -281,11 +282,8 @@ padding-left: 0;
 .country-btns{
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   width: 90vw;
-/* background-color: red; */
   margin-left: 0;
-  /* background-color: aqua; */
 padding-left: 0px;
 margin-bottom: 50px;
 }

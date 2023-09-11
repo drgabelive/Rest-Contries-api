@@ -100,10 +100,11 @@
   }
   
   .country {
+    text-wrap: wrap;
     font-weight:800;
     font-size: 20px;
     font-family: 'Nunito Sans' sans-serif;
-    
+    /* background-color: red; */
   }
   
 
