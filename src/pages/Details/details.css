@@ -10,18 +10,18 @@
   }
 
   .single-flag{
-    width: 480px;
-    height: 450px;
+    width: 540px;
+    height: 401px;
     border-radius: 15px;
-    margin-left: 15px;
-    
+    margin-left: 50px;
+    margin-top: -25px;
   } 
 
   .country-btns{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* margin-left: -100px; */
+    
     
   }
   
@@ -29,12 +29,10 @@
   .border-container{
     display:flex;
     flex-direction: row;
-    /* align-items:center; */
     width: 1000px;
-    /* justify-content: space-between;   */
     padding-top: 60px;
     padding-left: 20px;
-
+    margin-left: 90px;
   }
 
  
@@ -47,30 +45,29 @@
   .details-main{
     display: flex;
     width: 100%;
+   
   }
 
 
   .detail-container-2{
-    margin-left: 20%;
+    margin-left: 0%;
   }
 
  
 
 .detail-container{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   padding-top: 30px;
   padding-left: 20px;
-  /* background-color: blue; */
 }
 
 
 .details-info{
   width: 100%;
   padding-top: 15px;
-  margin-left: 10px;
-  /* background-color: red; */
+  margin-left: 90px;
 }
 
 
@@ -114,7 +111,7 @@ align-self: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 90px 0 90px 70px;  
+  margin: 50px 0 90px 100px;  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: center;
   border-radius: 10px;
@@ -123,7 +120,7 @@ align-self: baseline;
   .name{
     font-family:'Nunito Sans', sans-serif;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 32px;
     padding-left: 20px;
   }
   
@@ -131,7 +128,7 @@ align-self: baseline;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: bold;
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     width: 350px;
     
@@ -141,25 +138,19 @@ align-self: baseline;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: bold;
     margin: 10px 0;
-    /* background: red; */
     font-size: 14px;
     text-decoration: none;
-    /* width: 120px; */
   }
 
-
-  /* .details{
-    margin: 45px 0;
-  } */
-  
 
 .native-name{
   margin-left: 10px;
 }
 
 
-                   /* mobile screen styles */
-@media screen and (min-width:320px) and (max-width: 480px) { 
+
+                   
+@media screen and (min-width:320px) and (max-width: 480px) { /* mobile screen styles */
 
   .nav{
     background-color: transparent;
@@ -168,7 +159,8 @@ align-self: baseline;
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 24px 28px;
+    padding: 24px 30px;
+    /* margin-right: 20px; */
     font-size: 12px;
   }
   
@@ -202,7 +194,7 @@ align-self: baseline;
 
   .single-flag{
     max-width: 100vw;
-    width: 350px;
+    width: 300px;
     height: 260px;
     border-radius: 10px;
     margin-left: 10px;
@@ -251,7 +243,7 @@ align-self: baseline;
 .details-info{
   width: 100%;
   padding-top: 40px;
-  padding-left:10px 
+  margin-left:20px 
 }
 
 
@@ -262,7 +254,6 @@ padding-left: 0;
 
 
 .par_2{
- /* background: red; */
  font-size: 18px;
 }
 
@@ -273,7 +264,7 @@ padding-left: 0;
 
 
 .border-container{
-  padding-left: 20px;
+  margin-left: 0px;
   flex-direction: column;
   width: 100vw;
   flex-wrap: wrap;
