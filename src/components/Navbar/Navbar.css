@@ -1,15 +1,15 @@
 
-.nav{
-    background-color: transparent;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 96px;
-    margin-bottom: 20px;
-  }
+nav{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 96px;
+  margin-bottom: 20px;
+  width: 100%;
+}
   
 
   h2{
@@ -17,19 +17,16 @@
     padding-left: 10px;
     font-size: 16px;
     font-weight: 900;
-    /* background-color: red; */
   }
 
 
       .nav span  {
         margin-top: 15px;
         font-weight: bold;
-        /* padding-right: 0.5rem; */
         color: FFFFFF;
         font-family: 'Nunito Sans';
         font-size: 16px;
         margin-right: 25px; 
-        /* flex-wrap: wrap; */
       }
 
 
@@ -40,10 +37,10 @@
   
   .nav-span:hover {
     cursor: pointer;
-  }
+  } 
 
 /* media   queries for Mobile View */
-@media screen and (min-width:320px) and (max-width: 480px) { 
+@media screen and (max-width: 600px) { 
   
     .nav{
       height: 80px;

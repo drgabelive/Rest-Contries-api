@@ -80,8 +80,6 @@
     font-family: 'Nunito Sans', sans-serif; 
     font-weight: bolder;
     color: black;
-    /* height: 30vh; */
-    /* width: 29rem; */
     margin: 0px 0px;
     border-radius: 10px;
   }
@@ -94,9 +92,8 @@
   }
   
   .details {
-    /* padding: 60px 0px; */
     margin-bottom: 20px;
-    /* background-color: red; */
+    
   }
   
   .country {

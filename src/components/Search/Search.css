@@ -47,7 +47,7 @@
   
 
 /* media   queries for Mobile View */
-@media screen and (min-width:320px) and (max-width: 480px) { 
+@media screen and (max-width: 600px) { 
 
     .search-container{
       width: 90vw;
@@ -62,9 +62,9 @@
     
     .search {
       height: 58px;
-      width:420px;
+      width:100%;
       margin-top: 30px;
-      margin-left: -20px;
+      margin-left: 0px;
       display: flex;
       flex-direction: row;
       /* background-color: blue; */
