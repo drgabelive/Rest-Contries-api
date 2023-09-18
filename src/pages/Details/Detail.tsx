@@ -116,7 +116,6 @@ function Detail() {
       style={theme === "light" ? LightTheme : DarkTheme}
       className="single-container"
     >
-      {/* <div className="back"> */}
       <Link
         className="back"
         to={`/`}
@@ -127,7 +126,7 @@ function Detail() {
           Back
         </div>
       </Link>
-      {/* </div> */}
+
       {country && (
         <div className="details-main">
           <div className="single-card">
@@ -144,9 +143,9 @@ function Detail() {
                 <h2 className="name">{country.name.official}</h2>
               </div>
               <div className="detail-container">
-                <div>
+                <div className="detail-container-2">
                   <p className="par2">
-                    Native Name:
+                    Native Name:{" "}
                     <span className="native-name">
                       {Object.keys(country.name.nativeName).map((el, key) => {
                         return (
@@ -164,7 +163,7 @@ function Detail() {
                     </span>
                   </p>
                   <p className="par2">
-                    Population:{" "}
+                    Population:{"  "}
                     <span className="population">
                       {country.population.toLocaleString("en-US")}
                     </span>
@@ -178,20 +177,20 @@ function Detail() {
                   </p>
                   <p className="par2">
                     Capital:
-                    <span className="capital">{country.capital[0]}</span>
+                    <span className="capital"> {country.capital[0]}</span>
                   </p>
                 </div>
                 <div className="detail-container-2">
                   <p className="par2">
                     Top Level Domain:{" "}
-                    <span className="top-level">{country.tld}</span>
+                    <span className="top-level"> {country.tld}</span>
                   </p>
                   <p className="par2">
                     Currencies:
                     <span className="capital">
                       {Object.keys(country.currencies).map((el, key) => {
                         return (
-                          <span key={key}>{country.currencies[el].name}</span>
+                          <span key={key}> {country.currencies[el].name}</span>
                         );
                       })}
                     </span>

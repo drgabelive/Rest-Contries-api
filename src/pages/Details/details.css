@@ -1,4 +1,9 @@
 
+.single-container{
+  max-width: 100vw;
+  max-height: 80vh;
+  overflow: hidden;
+}
 .single-card{
     width: 500px;
     height: 550px;
@@ -21,14 +26,13 @@
     flex-wrap: wrap;
     align-items: center;
     
-    
   }
   
 
   .border-container{
     display:flex;
     flex-direction: row;
-    width: 1000px;
+    width: 40vw;
     padding-top: 60px;
     padding-left: 20px;
     margin-left: 90px;
@@ -40,9 +44,13 @@
     
   }
 
-
+  .details-main-main{
+       max-width: 50vw;
+  
+    }
   .details-main{
     display: flex;
+    /* flex-wrap: wrap; */
     width: 100%;
    
   }
@@ -50,13 +58,14 @@
 
   .detail-container-2{
     margin-left: 0%;
+    width: 50%;
   }
 
  
 
 .detail-container{
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 30px;
   padding-left: 20px;
@@ -75,7 +84,7 @@
   border-radius: 5px;
   text-align: center;
   padding: 6px 20px;
-  margin: 0 10px;
+  margin: 0px 0px 15px 15px;
   height: 30px;
   
 }
@@ -95,7 +104,6 @@ font-size: 16px;
 
 .border-row-p-link{
 font-family: "Nunito Sans";
-
   font-size: 12px;
   text-decoration: none;
 }
@@ -110,7 +118,7 @@ align-self: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 50px 0 90px 100px;  
+  margin: 10px 0 40px 100px;  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: center;
   border-radius: 10px;
@@ -142,15 +150,16 @@ align-self: baseline;
   }
 
 
-.native-name{
-  margin-left: 10px;
-}
+
 
 
 
                    
 @media screen and (min-width:320px) and (max-width: 480px) { /* mobile screen styles */
-
+  .single-container{
+    max-height: auto;
+    overflow: scroll;
+  }
   .nav{
     background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -253,6 +262,7 @@ padding-left: 0;
 
 .par_2{
  font-size: 18px;
+
 }
 
 
