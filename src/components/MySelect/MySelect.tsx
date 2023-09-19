@@ -62,7 +62,7 @@ export default function MySelect() {
       <FormControl fullWidth>
         <Select
           // id="demo-simple-select"
-          className="bright11"
+          className={`bright11 ${theme === "light" ? "" : "select-dark"} `}
           value={region}
           displayEmpty
           onChange={handleChange}

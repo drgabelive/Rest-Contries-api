@@ -6,13 +6,15 @@ nav{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 96px;
+  padding: 20px 90px;
   margin-bottom: 20px;
   width: 100vw;
+  max-width: 100%;
 }
   
 
   h2{
+    
     margin-top: 15px;
     padding-left: 10px;
     font-size: 16px;
@@ -26,7 +28,7 @@ nav{
         color: FFFFFF;
         font-family: 'Nunito Sans';
         font-size: 16px;
-        margin-right: 25px; 
+        margin-right: 0px; 
       }
 
 
@@ -39,8 +41,13 @@ nav{
     cursor: pointer;
   } 
 
+
+
+
+
+
 /* media   queries for Mobile View */
-@media screen and (max-width: 600px) { 
+@media only screen and (max-width: 768px) { 
   
     .nav{
       height: 80px;

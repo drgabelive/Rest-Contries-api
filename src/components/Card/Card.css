@@ -14,20 +14,22 @@
     font-family: 'Nunito Sans', sans-serif; 
     font-weight: bolder;
     color: black;
-    height: 33vh;
-    width: 20rem;
+    /* height: 33vh; */
+    width: 19rem;
     background-color: transparent;
     margin: 30px 66px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    padding-bottom: 15px;
    
   }
   
   .flag{
-    width: 20rem;
+    width: 19rem;
     height: 150px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    flex-wrap: wrap;
   }
 
   
@@ -61,57 +63,3 @@
     font-size: 15px;
   }
 
-
-  
-  .card-container{
-    font-family: 'Nunito Sans', sans-serif; 
-    font-weight: bolder;
-    color: black;
-    height: 400px;
-    width: 19rem;
-    background-color: transparent;
-    margin: 0px 60px;
-    margin-top: 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .cards-container{
-    font-family: 'Nunito Sans', sans-serif; 
-    font-weight: bolder;
-    color: black;
-    margin: 0px 0px;
-    border-radius: 10px;
-  }
-  
-  .flag{
-    width: 20rem;
-    height: 200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  .details {
-    margin-bottom: 20px;
-    
-  }
-  
-  .country {
-    text-wrap: wrap;
-    font-weight:800;
-    font-size: 20px;
-    font-family: 'Nunito Sans' sans-serif;
-    /* background-color: red; */
-  }
-  
-
-  .par{
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight:600;
-    margin-top: 10px;
-  }
-  .population, .region, .capital {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 200;
-    font-size: 15px;
-  }
