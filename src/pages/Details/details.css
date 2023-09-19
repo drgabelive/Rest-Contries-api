@@ -36,7 +36,7 @@
   .border-container{
     display:flex;
     flex-direction: row;
-    width: 40vw;
+    width: 54vw;
     padding-top: 60px;
     padding-left: 20px;
     margin-left: 90px;
@@ -152,6 +152,7 @@ align-self: baseline;
     margin: 10px 0;
     font-size: 14px;
     text-decoration: none;
+    max-width: 10rem;
   }
 
 

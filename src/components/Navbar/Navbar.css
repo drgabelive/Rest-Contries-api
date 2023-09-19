@@ -9,7 +9,7 @@ nav{
   padding: 20px 90px;
   margin-bottom: 20px;
   width: 100vw;
-  max-width: 100%;
+ 
 }
   
 
@@ -29,6 +29,7 @@ nav{
         font-family: 'Nunito Sans';
         font-size: 16px;
         margin-right: 0px; 
+        max-width: 93%;
       }
 
 
@@ -60,6 +61,8 @@ nav{
       padding: 0 38px;
       color: FFFFFF;
       font-family: 'Nunito Sans';
+      width: 92.5vw;
+      /* max-width: 100%; */
     }
     
 
