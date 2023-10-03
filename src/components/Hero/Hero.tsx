@@ -22,7 +22,7 @@ const Hero = () => {
 
   // Render the Hero component
   return (
-    <div>
+    <div className="cc">
       <div className="cards-container">
         {countries.map((el) => {
           const elCapital: string[] = el.capital as unknown as string[];

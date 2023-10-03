@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&display=swap');
 nav{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -9,6 +9,7 @@ nav{
   padding: 20px 90px;
   margin-bottom: 20px;
   width: 100vw;
+  font-family: 'Nunito Sans';
  
 }
   
@@ -16,7 +17,7 @@ nav{
   h2{
     
     margin-top: 15px;
-    padding-left: 10px;
+    padding-left: 0px;
     font-size: 16px;
     font-weight: 900;
   }
@@ -44,31 +45,26 @@ nav{
 
 
 
-
-
-
 /* media   queries for Mobile View */
 @media only screen and (max-width: 768px) { 
   
-    .nav{
-      height: 80px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction:row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 38px;
-      color: FFFFFF;
-      font-family: 'Nunito Sans';
-      width: 100vw;
-      /* max-width: 100%; */
-    }
+   
+  .nav{
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 30px;
+    font-size: 12px;
+    max-width: 100%;
+  } 
     
 
   h2{
     margin-top: 15px;
-    margin-left: -20px;
+    margin-left: 0px;
     font-size: 16px;
     font-weight: 900;
   }

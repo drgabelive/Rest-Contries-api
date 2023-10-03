@@ -29,6 +29,7 @@ function Navbar(props: Navbar) {
   };
   // Render the Navbar component
   return (
+    <div className="cc">
     <nav
       style={props.theme === "light" ? LightTheme : DarkTheme}
       className="nav"
@@ -42,6 +43,7 @@ function Navbar(props: Navbar) {
         {themeText}
       </span>
     </nav>
+    </div>
   );
 }
 

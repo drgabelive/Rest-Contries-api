@@ -43,9 +43,10 @@ function Search(props: { theme: string }) {
   };
   // Render the Search component
   return (
-    <div className="search-container">
-      <div className="search">
-        <span
+    
+        <div className="search-container">
+            <div className="search">
+               <span
           className="search-span"
           style={props.theme === "light" ? {} : { backgroundColor: "#2B3844" }}
         >
@@ -61,11 +62,12 @@ function Search(props: { theme: string }) {
             placeholder="Search for a country..."
             onChange={handleChange}
           />
-        </span>
-      </div>
-      <div>
+               </span>
+            </div>
+          <div>
         <MySelect />
       </div>
+    
     </div>
   );
 }
