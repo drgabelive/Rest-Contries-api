@@ -72,6 +72,9 @@ function Detail() {
   const { countryName } = useParams();
   const [country, setCountry] = useState<CountryDetails | null>(null);
   const { theme } = useContext(ThemeContext);
+
+
+  
   const LightThemeBack = {
     backgroundColor: "#fff",
     color: "#000",

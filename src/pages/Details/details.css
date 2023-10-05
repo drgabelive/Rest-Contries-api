@@ -236,6 +236,7 @@ align-self: baseline;
 .name{
   height: auto;
   max-width: 320px;
+  padding-left: 0px;
 }
 
 
