@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Card from "../Card/Card";
 import { CountryContext, Country } from "../../context/CountryContext";
 import { SearchContext } from "../../context/SearchContext";
 
 // Define the Hero component
 const Hero = () => {
-  const { countries, setCountries } = useContext(CountryContext);
+  const { countries } = useContext(CountryContext);
   const { criteria } = useContext(SearchContext);
 
   function getBorderCountries(
@@ -112,11 +112,10 @@ const Hero = () => {
 
     return isIncluded;
   }
-  const filteredList : Country[] = countries.filter(filterCountries);
+  const filteredList: Country[] = countries.filter(filterCountries);
   // Render the Hero component
-  if(filteredList.length == 0) {
-    return (
-    <div className="Not-Found">Country Not Found</div>);
+  if (filteredList.length == 0) {
+    return <div className="Not-Found">Country Not Found</div>;
   }
   return (
     <div className="cc">
