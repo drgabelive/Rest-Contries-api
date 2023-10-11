@@ -6,13 +6,19 @@ import "./Card.css";
 
 // Card typescript definition
 
-type CardProps = {
+export type CardProps = {
   flag: string;
   country: string;
   population: number;
   region: string;
   capital: string;
   alt: string;
+  borderCountries: string[];
+  nativeName: string;
+  subregion: string;
+  tld: string;
+  currencies: string;
+  languages: string;
 };
 
 // Card functional component definition
@@ -23,8 +29,10 @@ const Card = (props: CardProps) => {
   const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
   const { theme } = useContext(ThemeContext);
 
+  // console.log(props)
+
   return (
-    <Link to={`/details/${props.country}`} className="cardLink">
+    <Link to={`/details/${props.country}`} className="cardLink" state={props}>
       <div className="main-container">
         <div
           style={theme === "light" ? LightTheme : DarkTheme}
