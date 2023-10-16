@@ -3,45 +3,9 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { CountryContext } from "../../context/CountryContext";
 import { ThemeContext } from "../../context/themeContext";
 // import axios from "axios";
 import { SearchContext } from "../../context/SearchContext";
-
-// define interface country that will be fetched from the API
-// interface Country {
-//   foo: string;
-//   name: {
-//     official: string;
-//     common: string;
-//     nativeName: {
-//       [key: string]: {
-//         official: string;
-//         common: string;
-//       };
-//     };
-//   };
-//   flags: {
-//     png: string;
-//     alt: string;
-//   };
-//   population: number;
-//   region: string;
-//   capital: string;
-//   borders: string[];
-//   cca3: string;
-//   subregion: string;
-//   tld: string[];
-//   currencies: {
-//     [key: string]: {
-//       name: string;
-//       symbol: string;
-//     };
-//   };
-//   languages: {
-//     [key: string]: string;
-//   };
-// }
 
 export default function MySelect() {
   //  state initialization for theme
@@ -53,30 +17,6 @@ export default function MySelect() {
   const { theme } = React.useContext(ThemeContext);
   const { criteria, setCriteria } = React.useContext(SearchContext);
 
-  // fetch countries Data by Region
-  // const getCountriesByRegion = (region: string) => {
-  
-
-    // if (region === "") {
-    //   axios
-    //     .get<Country[]>(`https://restcountries.com/v3.1/all`)
-    //     .then((res) => {
-    //       setCountries(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // } else {
-    //   axios
-    //     .get<Country[]>(`https://restcountries.com/v3.1/region/${region}`)
-    //     .then((res) => {
-    //       setCountries(res.data);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //     });
-    // }
-  // };
   // Event Handler for Select Component:
   const handleChange = (event: SelectChangeEvent) => {
     // setRegion(event.target.value);

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useParams, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import axios from "axios";
 import "./details.css";
 import { ThemeContext } from "../../context/themeContext";
@@ -8,46 +8,46 @@ import { Country, CountryContext } from "../../context/CountryContext";
 // import { getPopoverUtilityClass } from "@mui/material";
 
 //  Define TypeScript interfaces to represent the expected structure of data
-interface BorderCountry {
-  name: string;
-}
-interface CountryDetails {
-  name: {
-    official: string;
-    common: string;
-    nativeName: {
-      [key: string]: {
-        official: string;
-        common: string;
-      };
-    };
-  };
-  flags: {
-    png: string;
-    alt: string;
-  };
-  population: number;
-  region: string;
-  capital: string;
-  borders: string[];
-  cca3: string;
-  subregion: string;
-  tld: string[];
-  currencies: {
-    [key: string]: {
-      name: string;
-      symbol: string;
-    };
-  };
-  languages: {
-    [key: string]: string;
-  };
-}
+// interface BorderCountry {
+//   name: string;
+// }
+// interface CountryDetails {
+//   name: {
+//     official: string;
+//     common: string;
+//     nativeName: {
+//       [key: string]: {
+//         official: string;
+//         common: string;
+//       };
+//     };
+//   };
+//   flags: {
+//     png: string;
+//     alt: string;
+//   };
+//   population: number;
+//   region: string;
+//   capital: string;
+//   borders: string[];
+//   cca3: string;
+//   subregion: string;
+//   tld: string[];
+//   currencies: {
+//     [key: string]: {
+//       name: string;
+//       symbol: string;
+//     };
+//   };
+//   languages: {
+//     [key: string]: string;
+//   };
+// }
 
 // Create the main functional component Detail
 function Detail() {
-  const { countryName } = useParams();
-  const { countries, setCountries } = useContext(CountryContext);
+  // const { countryName } = useParams();
+  const { countries } = useContext(CountryContext);
   // const [country, setCountry] = useState<CountryDetails | null>(null);
   const { theme } = useContext(ThemeContext);
   const location: { state: CardProps } = useLocation();
@@ -256,7 +256,7 @@ function Detail() {
 
               <div className="country-btns">
                 {props.borderCountries?.length > 0
-                  ? props.borderCountries.map((el, key) => {
+                  ? props.borderCountries.map((el) => {
                       // return <BorderCountryCard key={key} name={el} />;
                       // create prop object
                       const country = findCountry(countries, el);

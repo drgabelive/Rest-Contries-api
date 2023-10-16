@@ -1,4 +1,3 @@
-import { common } from "@mui/material/colors";
 import { createContext } from "react";
 
 // Define the interface for the country data

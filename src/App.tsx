@@ -4,7 +4,7 @@ import { CountryContext } from "./context/CountryContext";
 import { ThemeContext } from "./context/themeContext";
 import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter, Routes, Route, Search } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Detail from "./pages/Details/Detail";
 import axios from "axios";
 import { SearchContext, SearchCriteria } from "./context/SearchContext";
