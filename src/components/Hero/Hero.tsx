@@ -115,7 +115,7 @@ const Hero = () => {
   const filteredList: Country[] = countries.filter(filterCountries);
   // Render the Hero component
   if (filteredList.length == 0) {
-    return <div className="Not-Found">Country Not Found</div>;
+    return <div className="Not-Found">The Country Is Not Found In This Region!!</div>;
   }
   return (
     <div className="cc">

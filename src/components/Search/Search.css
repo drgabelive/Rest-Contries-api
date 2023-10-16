@@ -47,6 +47,12 @@
   /* color: white; */
   }
 
+  .Not-Found{
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    padding-top: 10rem;
+  }
   
 
 /* media   queries for Mobile View */
