@@ -48,11 +48,14 @@
     
   }
 
+
   .details-main-main{
        max-width: 50vw;
        align-items: center;
   
     }
+
+
   .details-main{
     display: flex;
    
@@ -130,12 +133,14 @@ align-self: baseline;
   border-radius: 10px;
 }
 
+
   .name{
     font-family:'Nunito Sans', sans-serif;
     font-weight: 800;
     font-size: 32px;
     padding-left: 20px;
   }
+
   
   .par2{
     font-family: 'Nunito Sans', sans-serif;
@@ -146,6 +151,7 @@ align-self: baseline;
     width: 350px;
     
   }
+
 
   .par_2{
     font-family: 'Nunito Sans', sans-serif;
@@ -271,6 +277,7 @@ padding-left: 0;
   flex-wrap: wrap;
 }
 
+
 .country-btns{
   display: flex;
   flex-direction: row;
@@ -279,6 +286,7 @@ padding-left: 0;
 padding-left: 0px;
 margin-bottom: 50px;
 }
+
 
 .border-row{
   background: white;
