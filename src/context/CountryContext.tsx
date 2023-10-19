@@ -1,7 +1,8 @@
 import { createContext } from "react";
+import { CountryModel } from "../model/CountryModel";
 
 // Define the interface for the country data
-export interface Country {
+export interface CountryAPIType {
   foo: string;
   name: {
     official: string;
@@ -19,7 +20,7 @@ export interface Country {
   };
   population: number;
   region: string;
-  capital: string;
+  capital: string[];
   borders: string[];
   cca3: string;
   subregion: string;
@@ -37,9 +38,17 @@ export interface Country {
 
 
 // Define the interface for the CountryContextType
-interface CountryContextType {
-  countries: Country[];
-  setCountries: (countries: Country[]) => void;
+export interface CountryContextType {
+  countries: CountryModel[];
+  setCountries: (countries: CountryModel[]) => void;
+  region: {
+    get: string;
+    set: (region: string) => void;
+  }
+  searchTerm: {
+    get: string;
+    set: (searchTerm: string) => void;
+  }
 }
 
 // Create a context using createContext
@@ -48,4 +57,53 @@ export const CountryContext = createContext<CountryContextType>({
   setCountries: () => {
     console.log("hi");
   },
+  region: {
+    get: "",
+    set: ()=>{ console.log("region setter unimplemented") }
+  },
+  
+  searchTerm: {
+    get: "",
+    set: ()=>{ console.log("searchTerm setter unimplemented") }
+  }
 });
+
+
+interface NativeNameType {
+  [key: string]: {
+    official: string;
+    common: string;
+  };
+}
+
+export interface FlagInfoType {
+  png: string;
+  alt: string;
+}
+
+interface CurrencyType {
+  [key: string]: {
+    name: string;
+    symbol: string;
+  }
+}
+
+interface LanguageType {
+  [key: string]: string
+}
+
+export interface CountryPropType {
+  officialName: string
+  commonName: string
+  nativeNames: NativeNameType
+  flagInfo: FlagInfoType
+  population: number
+  region: string;
+  capital: string;
+  borderCountryNameAbbreviations: string[];
+  cca3: string;
+  subregion: string;
+  tld: string[];
+  currencies: CurrencyType
+  languages: LanguageType
+}

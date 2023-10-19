@@ -44,15 +44,9 @@
   position: relative;
   background-color: transparent;
   outline: none;
-  /* color: white; */
+  color: red;
   }
 
-  .Not-Found{
-    font-size: 50px;
-    color: red;
-    text-align: center;
-    padding-top: 10rem;
-  }
   
 
 /* media   queries for Mobile View */
@@ -105,14 +99,5 @@
       }
   
 
-      .Not-Found{
-        font-size: 50px;
-        color: red;
-        text-align: center;
-        padding-top: 0.1rem;
-        padding-bottom: 2rem;
-      }
 
     }
-
-     

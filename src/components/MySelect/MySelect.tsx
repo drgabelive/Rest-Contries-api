@@ -1,29 +1,31 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
-import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import * as React from "react";
+import { CountryContext } from "../../context/CountryContext";
 import { ThemeContext } from "../../context/themeContext";
-// import axios from "axios";
-import { SearchContext } from "../../context/SearchContext";
+import { useContext } from "react";
 
 export default function MySelect() {
   //  state initialization for theme
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
-  const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
+  const DarkTheme = {
+    backgroundColor: "#2B3844",
+    color: "#fff",
+  };
 
-  // const [region, setRegion] = React.useState("");
-  // const { setCountries } = React.useContext(CountryContext);
+  const { region } = useContext(CountryContext);
   const { theme } = React.useContext(ThemeContext);
-  const { criteria, setCriteria } = React.useContext(SearchContext);
 
   // Event Handler for Select Component:
   const handleChange = (event: SelectChangeEvent) => {
-    // setRegion(event.target.value);
-    setCriteria({
-      ...criteria,
-      region: event.target.value,
-    });
+    region.set(event.target.value);
+
+    // const filter = new Filter(countries)
+    // filter.add(new RegionFilter(event.target.value))
+
+    // setCountries(filter.execute())
   };
 
   return (
@@ -32,7 +34,7 @@ export default function MySelect() {
         <Select
           // id="demo-simple-select"
           className={`bright11 ${theme === "light" ? "" : "select-dark"} `}
-          value={criteria.region ?? ""}
+          value={region.get}
           displayEmpty
           onChange={handleChange}
           sx={theme === "light" ? LightTheme : DarkTheme}
@@ -48,7 +50,7 @@ export default function MySelect() {
           </MenuItem>
           <MenuItem
             sx={theme === "light" ? LightTheme : DarkTheme}
-            value={"america"}
+            value={"americas"}
           >
             America
           </MenuItem>

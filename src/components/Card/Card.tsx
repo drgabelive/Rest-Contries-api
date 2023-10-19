@@ -1,63 +1,48 @@
 // import statements
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../../context/themeContext";
+import { CountryModel } from "../../model/CountryModel";
 import "./Card.css";
 
-// Card typescript definition
-
 export type CardProps = {
-  flag: string;
-  country: string;
-  population: number;
-  region: string;
-  capital: string;
-  alt: string;
-  borderCountries: string[];
-  nativeName: string;
-  subregion: string;
-  tld: string;
-  currencies: string;
-  languages: string;
+  country: CountryModel
 };
 
-// Card functional component definition
-
 const Card = (props: CardProps) => {
-  // theme Context and styling
+  
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = { backgroundColor: "#2B3844", color: "#fff" };
   const { theme } = useContext(ThemeContext);
 
-  // console.log(props)
+  const country = props.country
 
   return (
-    <Link to={`/details/${props.country}`} className="cardLink" state={props}>
+    <Link to={`/details/${country.officialName}`} className="cardLink">
       <div className="main-container">
         <div
           style={theme === "light" ? LightTheme : DarkTheme}
           className="card-container"
         >
-          {/* Rendering the country details  */}
           <div>
-            <img className="flag" src={props.flag} alt={props.alt} />
+            <img className="flag" src={country.flagInfo.png} alt={country.flagInfo.alt} />
           </div>
           <div className="details" style={{ paddingLeft: "20px" }}>
             <div>
-              <span className="country">{props.country}</span>
+              <span className="country">{country.officialName}</span>
             </div>
             <div>
               <p className="par first-par">
-                Population: {/* This adds commas to the numbers */}
+                Population: 
                 <span className="population">
-                  {props.population.toLocaleString("en-US")}
+                  {country.population.toLocaleString("en-US")}
                 </span>
               </p>
               <p className="par">
-                Region: <span className="region">{props.region}</span>
+                Region: <span className="region">{country.region}</span>
               </p>
               <p className="par">
-                Capital: <span className="capital">{props.capital}</span>
+                Capital: <span className="capital">{country.capital}</span>
               </p>
             </div>
           </div>

@@ -1,81 +1,45 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { useEffect, useMemo, useState } from "react";
-import { CountryContext } from "./context/CountryContext";
-import { ThemeContext } from "./context/themeContext";
-import Home from "./pages/Home/Home";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { CountryContext } from "./context/CountryContext";
+import { ThemeContext } from "./context/themeContext";
+import { ContainerContext } from "./main";
+import { CountryModel } from "./model/CountryModel";
 import Detail from "./pages/Details/Detail";
-import axios from "axios";
-import { SearchContext, SearchCriteria } from "./context/SearchContext";
+import Home from "./pages/Home/Home";
+import { CountryRepo } from "./repository/CountryRepository";
+import { CountryContext, CountryContextType } from "./context/CountryContext";
+import { Filter } from "./filter/Filter";
+import { RegionFilter } from "./filter/RegionFilter";
+import { OfficialNameSearchFilter } from "./filter/OfficialNameSearchFilter";
 
-// Define a TypeScript interface for the structure of a country
-export interface Country {
-  foo: string;
-  name: {
-    official: string;
-    common: string;
-    nativeName: {
-      [key: string]: {
-        official: string;
-        common: string;
-      };
-    };
-  };
-  flags: {
-    png: string;
-    alt: string;
-  };
-  population: number;
-  region: string;
-  capital: string;
-  borders: string[];
-  cca3: string;
-  subregion: string;
-  tld: string[];
-  currencies: {
-    [key: string]: {
-      name: string;
-      symbol: string;
-    }
-  },
-  languages: {
-    [key: string]: string
-  }
-}
-
-
-// Define the main functional component of the app
 function App() {
-  // Set up state for countries and theme
-  const [countries, setCountries] = useState<Country[]>([]);
+  const [countries, setCountries ] = useState<CountryModel[]>([]);
+  const [region, setRegion] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [theme, setTheme] = useState("light");
-  const [criteria, setCriteria] = useState<SearchCriteria>({
-    title: null,
-    region: null,
-  });
+  const container = useContext(ContainerContext)
+  const countryRepo: CountryRepo = container.resolve<CountryRepo>(CountryRepo.name)
 
   useEffect(() => {
-    axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((res) => {
-        setCountries(res.data);
-        console.log('first fetch')
+
+    countryRepo.all()
+      .then((countries) => {
+        const filter = new Filter(countries)
+        filter.add(new RegionFilter(region))
+        filter.add(new OfficialNameSearchFilter(searchTerm))
+        setCountries(filter.execute())
+
+        console.log(filter.execute())
+
       })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+      .catch(err => console.log("error setting countries", err))
 
-  // Create memoized values for context providers
-  const value = useMemo(
-    () => ({ countries, setCountries }),
-    [countries, setCountries]
-  );
+  }, [countryRepo, region, searchTerm]);
+
   const themeValue = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
-  const searchValue = useMemo(() => ({ criteria, setCriteria}), [criteria, setCriteria]);
 
-  // Define theme styles
   const LightTheme = { backgroundColor: "#fff", color: "#000" };
   const DarkTheme = {
     backgroundColor: "#202C36",
@@ -83,11 +47,23 @@ function App() {
     minHeight: "100vh",
   };
 
-  // Render the app components
+  const countryContextProvider : CountryContextType = {
+    countries,
+    setCountries,
+    region: {
+      get: region,
+      set: setRegion
+    },
+    searchTerm: {
+      get: searchTerm,
+      set: setSearchTerm
+    }
+
+  }
+
   return (
     <ThemeContext.Provider value={themeValue}>
-      <CountryContext.Provider value={value}>
-      <SearchContext.Provider value={searchValue}>
+      <CountryContext.Provider value={countryContextProvider}>
         <BrowserRouter>
           <div style={theme === "light" ? LightTheme : DarkTheme}>
             <Navbar theme={theme} />
@@ -97,7 +73,6 @@ function App() {
             </Routes>
           </div>
         </BrowserRouter>
-      </SearchContext.Provider>
       </CountryContext.Provider>
     </ThemeContext.Provider>
   );

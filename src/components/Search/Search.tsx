@@ -1,26 +1,28 @@
 import { useContext } from "react";
 import MySelect from "../MySelect/MySelect";
+import { CountryContext } from "../../context/CountryContext";
+// import axios from "axios";
 import "./Search.css";
-import { SearchContext } from "../../context/SearchContext";
+
 
 // Define the Search component
 function Search(props: { theme: string }) {
-  const { criteria, setCriteria } = useContext(SearchContext);
   // Country Context and State Usage:
-  // const { setCountries } = useContext(CountryContext);
+  const { searchTerm } = useContext(CountryContext);
   // Search Input Change Handler:
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+
     const searchValue = event.currentTarget.value;
-    setCriteria({
-      ...criteria,
-      title: searchValue,
-    });
+    // console.log(searchValue)
+    searchTerm.set(searchValue)
+    
   };
   // Render the Search component
   return (
-    <div className="search-container">
-      <div className="search">
-        <span
+    
+        <div className="search-container">
+            <div className="search">
+               <span
           className="search-span"
           style={props.theme === "light" ? {} : { backgroundColor: "#2B3844" }}
         >
@@ -36,11 +38,12 @@ function Search(props: { theme: string }) {
             placeholder="Search for a country..."
             onChange={handleChange}
           />
-        </span>
-      </div>
-      <div>
+               </span>
+            </div>
+          <div>
         <MySelect />
       </div>
+    
     </div>
   );
 }
