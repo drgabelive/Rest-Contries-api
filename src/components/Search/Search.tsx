@@ -28,7 +28,7 @@ function Search(props: { theme: string }) {
         >
           <i
             className="glass fa fa-search"
-            style={{ height: "20px", width: "40px" }}
+            style={{ height: "15px", width: "40px" }}
           ></i>
           <input
             className="input"
