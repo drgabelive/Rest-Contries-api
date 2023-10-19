@@ -1,86 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&display=swap');
-nav{
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&display=swap");
+nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 20px 110px;
   margin-bottom: 20px;
   width: 100vw;
-  font-family: 'Nunito Sans';
- 
+  font-family: "Nunito Sans";
 }
-  
 
-  h2{
-    
-    margin-top: 15px;
-    padding-left: 0px;
-    font-size: 16px;
-    font-weight: 900;
-  }
+h2 {
+  margin-top: 15px;
+  padding-left: 0px;
+  font-size: 20px;
+  font-weight: 900;
+}
 
+.nav span {
+  margin-top: 15px;
+  font-weight: bold;
+  color: FFFFFF;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  margin-right: 0px;
+}
 
-      .nav span  {
-        margin-top: 15px;
-        font-weight: bold;
-        color: FFFFFF;
-        font-family: 'Nunito Sans';
-        font-size: 16px;
-        margin-right: 0px; 
-        
-      }
+.nav span i {
+  margin-right: 0.7rem;
+}
 
-
-  .nav span i {
-    margin-right: 0.7rem;
-  }
-  
-  
-  .nav-span:hover {
-    cursor: pointer;
-  } 
-
-
+.nav-span:hover {
+  cursor: pointer;
+}
 
 /* media   queries for Mobile View */
-@media only screen and (max-width: 768px) { 
-  
-   
-  .nav{
+@media only screen and (max-width: 768px) {
+  .nav {
     background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 24px 30px;
     font-size: 12px;
     max-width: 100%;
-  } 
-    
+  }
 
-  h2{
+  h2 {
     margin-top: 15px;
     margin-left: 0px;
     font-size: 16px;
     font-weight: 900;
   }
 
-
-      .nav span  {
-        margin-top: 15px;
-        font-weight: bold;
-        margin-right: 0.5rem;
-        color: FFFFFF;
-        font-family: 'Nunito Sans';
-        font-size: 14px;
-        margin-right: -15px;  
-      }
-    
-
-
-
-    }
+  .nav span {
+    margin-top: 15px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: FFFFFF;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    margin-right: -15px;
+  }
+}
